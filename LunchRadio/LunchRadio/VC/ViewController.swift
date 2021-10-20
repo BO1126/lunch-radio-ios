@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var mainView : UIView!
     @IBOutlet weak var studentButton : UIButton!
     @IBOutlet weak var teacherButton : UIButton!
-    @IBOutlet weak var LoginButton : UIButton!
+    @IBOutlet weak var loginButton : UIButton!
     @IBOutlet weak var autoLoginToggleButton : UIButton!
 
     override func viewDidLoad() {
@@ -34,10 +34,10 @@ class ViewController: UIViewController {
         teacherButton.layer.borderWidth = 3
         teacherButton.layer.borderColor = CGColor(red: 233/255, green: 173/255, blue: 95/255, alpha: 1)
         
-        LoginButton.clipsToBounds = true
-        LoginButton.layer.cornerRadius = 10
-        LoginButton.layer.borderWidth = 3
-        LoginButton.layer.borderColor = CGColor(red: 233/255, green: 173/255, blue: 95/255, alpha: 1)
+        loginButton.clipsToBounds = true
+        loginButton.layer.cornerRadius = 10
+        loginButton.layer.borderWidth = 3
+        loginButton.layer.borderColor = CGColor(red: 233/255, green: 173/255, blue: 95/255, alpha: 1)
         
     }
     

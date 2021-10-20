@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,7 +30,7 @@
                                             <color key="titleColor" name="AccentColor"/>
                                         </state>
                                         <buttonConfiguration key="configuration" style="filled" title="교사">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                             <color key="baseForegroundColor" name="AccentColor"/>
                                             <color key="baseBackgroundColor" name="BaseColor"/>
                                         </buttonConfiguration>
@@ -47,7 +46,7 @@
                                             <color key="titleColor" name="AccentColor"/>
                                         </state>
                                         <buttonConfiguration key="configuration" style="filled" title="학생">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                             <color key="baseForegroundColor" name="AccentColor"/>
                                             <color key="baseBackgroundColor" name="BaseColor"/>
                                         </buttonConfiguration>
@@ -65,7 +64,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwT-co-M8H">
-                                        <rect key="frame" x="90" y="207" width="59" height="21"/>
+                                        <rect key="frame" x="90" y="212" width="59" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" name="AccentColor"/>
                                         <nil key="highlightedColor"/>
@@ -76,19 +75,19 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ipw-do-Vtr">
-                                        <rect key="frame" x="162" y="206" width="162" height="34"/>
+                                        <rect key="frame" x="159" y="206" width="165" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEl-HO-odX">
-                                        <rect key="frame" x="147" y="321" width="80" height="40"/>
+                                        <rect key="frame" x="137" y="321" width="100" height="45"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="3DS-sL-wcH"/>
-                                            <constraint firstAttribute="width" constant="80" id="4R6-WM-xnD"/>
+                                            <constraint firstAttribute="height" constant="45" id="3DS-sL-wcH"/>
+                                            <constraint firstAttribute="width" constant="100" id="4R6-WM-xnD"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="로그인">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                             <color key="baseForegroundColor" name="AccentColor"/>
                                             <color key="baseBackgroundColor" name="BaseColor"/>
                                         </buttonConfiguration>
@@ -118,7 +117,7 @@
                                     <constraint firstItem="ZXj-Jd-seC" firstAttribute="leading" secondItem="eOq-Hx-xPO" secondAttribute="leading" constant="80" id="0GN-qz-s8I"/>
                                     <constraint firstItem="VDD-S7-KFw" firstAttribute="top" secondItem="4rN-z0-Q6K" secondAttribute="bottom" constant="8" symbolic="YES" id="2fi-Ct-NFH"/>
                                     <constraint firstItem="4rN-z0-Q6K" firstAttribute="centerX" secondItem="eOq-Hx-xPO" secondAttribute="centerX" id="4Bq-7r-5Ey"/>
-                                    <constraint firstItem="Ipw-do-Vtr" firstAttribute="leading" secondItem="cwT-co-M8H" secondAttribute="trailing" constant="13" id="6bc-yh-wbR"/>
+                                    <constraint firstItem="Ipw-do-Vtr" firstAttribute="leading" secondItem="cwT-co-M8H" secondAttribute="trailing" constant="10" id="6bc-yh-wbR"/>
                                     <constraint firstAttribute="width" constant="374" id="6tG-gw-qBg"/>
                                     <constraint firstItem="cwT-co-M8H" firstAttribute="leading" secondItem="eOq-Hx-xPO" secondAttribute="leading" constant="90" id="FTp-pA-zVW"/>
                                     <constraint firstAttribute="trailing" secondItem="BWc-2I-lWo" secondAttribute="trailing" constant="80" id="GEa-pM-BFo"/>
@@ -130,7 +129,7 @@
                                     <constraint firstAttribute="trailing" secondItem="VDD-S7-KFw" secondAttribute="trailing" constant="50" id="YzF-jF-zHL"/>
                                     <constraint firstItem="c4r-Vl-XWF" firstAttribute="leading" secondItem="Gjy-2l-Ldk" secondAttribute="trailing" constant="5" id="ZjG-4k-bsc"/>
                                     <constraint firstAttribute="trailing" secondItem="Ipw-do-Vtr" secondAttribute="trailing" constant="50" id="fV3-sp-0CJ"/>
-                                    <constraint firstItem="cwT-co-M8H" firstAttribute="top" secondItem="MAc-S5-W3k" secondAttribute="bottom" constant="15" id="gGm-d0-tlJ"/>
+                                    <constraint firstItem="cwT-co-M8H" firstAttribute="top" secondItem="MAc-S5-W3k" secondAttribute="bottom" constant="20" id="gGm-d0-tlJ"/>
                                     <constraint firstItem="Ipw-do-Vtr" firstAttribute="top" secondItem="VDD-S7-KFw" secondAttribute="bottom" constant="8" symbolic="YES" id="hei-xJ-9Y1"/>
                                     <constraint firstItem="VDD-S7-KFw" firstAttribute="leading" secondItem="MAc-S5-W3k" secondAttribute="trailing" constant="27" id="hpG-PU-YgZ"/>
                                     <constraint firstItem="MAc-S5-W3k" firstAttribute="leading" secondItem="eOq-Hx-xPO" secondAttribute="leading" constant="90" id="kJr-DZ-kXp"/>
@@ -184,27 +183,73 @@
         <!--설정-->
         <scene sceneID="M7X-4W-RSw">
             <objects>
-                <viewController id="UOV-lH-y5t" sceneMemberID="viewController">
+                <viewController id="UOV-lH-y5t" customClass="SettingViewController" customModule="LunchRadio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QmA-te-aAn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vku-K3-yuB">
-                                <rect key="frame" x="20" y="213" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9JU-qh-y7U">
+                                <rect key="frame" x="147" y="464" width="120" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gfp-JH-h8j"/>
+                                    <constraint firstAttribute="width" constant="120" id="uM8-qJ-bD2"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="로그아웃">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="23"/>
+                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                    <color key="baseBackgroundColor" name="BaseColor"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ub-op-Sf8">
+                                <rect key="frame" x="190.5" y="614" width="33" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vku-K3-yuB">
+                                <rect key="frame" x="81" y="184" width="270" height="230"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COMING SOON!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbf-Uc-Zdv">
+                                        <rect key="frame" x="26" y="97" width="218" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="BaseColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="8PF-RU-Q9H"/>
+                                    <constraint firstItem="Gbf-Uc-Zdv" firstAttribute="centerX" secondItem="vku-K3-yuB" secondAttribute="centerX" id="DuN-ku-7dz"/>
+                                    <constraint firstAttribute="width" constant="270" id="Hpl-xk-PXJ"/>
+                                    <constraint firstItem="Gbf-Uc-Zdv" firstAttribute="centerY" secondItem="vku-K3-yuB" secondAttribute="centerY" id="rib-QI-igE"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="D4U-DU-HwB"/>
                         <color key="backgroundColor" name="BaseColor"/>
+                        <constraints>
+                            <constraint firstItem="9JU-qh-y7U" firstAttribute="top" secondItem="vku-K3-yuB" secondAttribute="bottom" constant="50" id="6LF-OL-D3W"/>
+                            <constraint firstItem="vku-K3-yuB" firstAttribute="leading" secondItem="D4U-DU-HwB" secondAttribute="leading" constant="81" id="8UB-d3-oGO"/>
+                            <constraint firstItem="5Ub-op-Sf8" firstAttribute="centerX" secondItem="QmA-te-aAn" secondAttribute="centerX" id="Ip2-CT-NSN"/>
+                            <constraint firstItem="9JU-qh-y7U" firstAttribute="centerX" secondItem="QmA-te-aAn" secondAttribute="centerX" id="es9-EN-J89"/>
+                            <constraint firstItem="vku-K3-yuB" firstAttribute="top" secondItem="D4U-DU-HwB" secondAttribute="top" constant="140" id="lke-tj-trm"/>
+                            <constraint firstItem="D4U-DU-HwB" firstAttribute="trailing" secondItem="vku-K3-yuB" secondAttribute="trailing" constant="63" id="rB8-xw-y6i"/>
+                            <constraint firstItem="5Ub-op-Sf8" firstAttribute="top" secondItem="9JU-qh-y7U" secondAttribute="bottom" constant="100" id="xat-6e-ioi"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="설정" image="RadioSettingIcon" id="ad0-SO-Y96">
                         <inset key="imageInsets" minX="25" minY="25" maxX="25" maxY="25"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="helpLabel" destination="5Ub-op-Sf8" id="pHK-YX-co9"/>
+                        <outlet property="logoutButton" destination="9JU-qh-y7U" id="rZf-ro-BD3"/>
+                        <outlet property="mainView" destination="vku-K3-yuB" id="L2c-0l-alv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kdj-hF-52t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="883" y="1293"/>
+            <point key="canvasLocation" x="882.60869565217399" y="1292.4107142857142"/>
         </scene>
         <!--확인-->
         <scene sceneID="YV9-Jg-YUV">
@@ -258,8 +303,5 @@
         <namedColor name="BaseColor">
             <color red="0.070588235294117646" green="0.094117647058823528" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

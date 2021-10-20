@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		423B814127204DB50001AB19 /* DungGeunMo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 423B814027204DB50001AB19 /* DungGeunMo.ttf */; };
+		423B81442720D3110001AB19 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423B81432720D3110001AB19 /* SettingViewController.swift */; };
 		4283AFC2272043370019A066 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4283AFC1272043370019A066 /* MainTabBarViewController.swift */; };
 		429316FE270D1BC70004DEED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429316FD270D1BC70004DEED /* AppDelegate.swift */; };
 		42931700270D1BC70004DEED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429316FF270D1BC70004DEED /* SceneDelegate.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		423B814027204DB50001AB19 /* DungGeunMo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = DungGeunMo.ttf; path = ../../../../../../Downloads/DungGeunMo.ttf; sourceTree = "<group>"; };
+		423B81432720D3110001AB19 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		4283AFC1272043370019A066 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		429316FA270D1BC70004DEED /* LunchRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunchRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		429316FD270D1BC70004DEED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +51,16 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		423B81422720D2AF0001AB19 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				42931701270D1BC70004DEED /* ViewController.swift */,
+				4283AFC1272043370019A066 /* MainTabBarViewController.swift */,
+				423B81432720D3110001AB19 /* SettingViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 		429316F1270D1BC70004DEED = {
 			isa = PBXGroup;
 			children = (
@@ -68,15 +80,14 @@
 		429316FC270D1BC70004DEED /* LunchRadio */ = {
 			isa = PBXGroup;
 			children = (
+				423B81422720D2AF0001AB19 /* VC */,
 				423B813F27204D970001AB19 /* Fonts */,
 				429316FD270D1BC70004DEED /* AppDelegate.swift */,
 				429316FF270D1BC70004DEED /* SceneDelegate.swift */,
-				42931701270D1BC70004DEED /* ViewController.swift */,
 				42931703270D1BC70004DEED /* Main.storyboard */,
 				42931706270D1BC80004DEED /* Assets.xcassets */,
 				42931708270D1BC80004DEED /* LaunchScreen.storyboard */,
 				4293170B270D1BC80004DEED /* Info.plist */,
-				4283AFC1272043370019A066 /* MainTabBarViewController.swift */,
 			);
 			path = LunchRadio;
 			sourceTree = "<group>";
@@ -153,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				423B81442720D3110001AB19 /* SettingViewController.swift in Sources */,
 				42931702270D1BC70004DEED /* ViewController.swift in Sources */,
 				4283AFC2272043370019A066 /* MainTabBarViewController.swift in Sources */,
 				429316FE270D1BC70004DEED /* AppDelegate.swift in Sources */,
