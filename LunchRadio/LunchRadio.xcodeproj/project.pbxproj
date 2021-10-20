@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		423B814127204DB50001AB19 /* DungGeunMo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 423B814027204DB50001AB19 /* DungGeunMo.ttf */; };
+		4283AFC2272043370019A066 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4283AFC1272043370019A066 /* MainTabBarViewController.swift */; };
 		429316FE270D1BC70004DEED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429316FD270D1BC70004DEED /* AppDelegate.swift */; };
 		42931700270D1BC70004DEED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429316FF270D1BC70004DEED /* SceneDelegate.swift */; };
 		42931702270D1BC70004DEED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42931701270D1BC70004DEED /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		423B814027204DB50001AB19 /* DungGeunMo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = DungGeunMo.ttf; path = ../../../../../../Downloads/DungGeunMo.ttf; sourceTree = "<group>"; };
+		4283AFC1272043370019A066 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		429316FA270D1BC70004DEED /* LunchRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunchRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		429316FD270D1BC70004DEED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		429316FF270D1BC70004DEED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		423B813F27204D970001AB19 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				423B814027204DB50001AB19 /* DungGeunMo.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		429316F1270D1BC70004DEED = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +68,7 @@
 		429316FC270D1BC70004DEED /* LunchRadio */ = {
 			isa = PBXGroup;
 			children = (
+				423B813F27204D970001AB19 /* Fonts */,
 				429316FD270D1BC70004DEED /* AppDelegate.swift */,
 				429316FF270D1BC70004DEED /* SceneDelegate.swift */,
 				42931701270D1BC70004DEED /* ViewController.swift */,
@@ -63,6 +76,7 @@
 				42931706270D1BC80004DEED /* Assets.xcassets */,
 				42931708270D1BC80004DEED /* LaunchScreen.storyboard */,
 				4293170B270D1BC80004DEED /* Info.plist */,
+				4283AFC1272043370019A066 /* MainTabBarViewController.swift */,
 			);
 			path = LunchRadio;
 			sourceTree = "<group>";
@@ -128,6 +142,7 @@
 				4293170A270D1BC80004DEED /* LaunchScreen.storyboard in Resources */,
 				42931707270D1BC80004DEED /* Assets.xcassets in Resources */,
 				42931705270D1BC70004DEED /* Main.storyboard in Resources */,
+				423B814127204DB50001AB19 /* DungGeunMo.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42931702270D1BC70004DEED /* ViewController.swift in Sources */,
+				4283AFC2272043370019A066 /* MainTabBarViewController.swift in Sources */,
 				429316FE270D1BC70004DEED /* AppDelegate.swift in Sources */,
 				42931700270D1BC70004DEED /* SceneDelegate.swift in Sources */,
 			);
@@ -292,11 +308,13 @@
 				DEVELOPMENT_TEAM = Z44PNMNA6D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LunchRadio/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "급식무전기";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +324,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,11 +338,13 @@
 				DEVELOPMENT_TEAM = Z44PNMNA6D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LunchRadio/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "급식무전기";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,7 +354,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

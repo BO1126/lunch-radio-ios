@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,15 +13,48 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchRadio" translatesAutoresizingMaskIntoConstraints="NO" id="Hqc-Hx-QUr">
+                                <rect key="frame" x="0.0" y="74" width="414" height="533"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="533" id="7cT-V0-daO"/>
+                                    <constraint firstAttribute="width" constant="414" id="fQQ-YC-k5l"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="급식무전기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sZ-fY-dKg">
+                                <rect key="frame" x="62" y="637" width="290" height="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="67"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="BaseColor"/>
+                        <constraints>
+                            <constraint firstItem="Hqc-Hx-QUr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6Qg-gD-if1"/>
+                            <constraint firstItem="7sZ-fY-dKg" firstAttribute="top" secondItem="Hqc-Hx-QUr" secondAttribute="bottom" constant="30" id="YEW-9w-h1O"/>
+                            <constraint firstItem="Hqc-Hx-QUr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="cuz-ZV-k2F"/>
+                            <constraint firstItem="Hqc-Hx-QUr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uRm-dj-uFL"/>
+                            <constraint firstItem="Hqc-Hx-QUr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wz0-Qz-aWM"/>
+                            <constraint firstItem="Hqc-Hx-QUr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xbw-Qb-Bkv"/>
+                            <constraint firstItem="7sZ-fY-dKg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="zoM-hr-WNw"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LaunchRadio" width="1080" height="1400"/>
+        <namedColor name="AccentColor">
+            <color red="0.90980392156862744" green="0.67843137254901964" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BaseColor">
+            <color red="0.070588235294117646" green="0.094117647058823528" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
