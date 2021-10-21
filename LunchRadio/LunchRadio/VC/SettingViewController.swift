@@ -26,7 +26,7 @@ class SettingViewController: UIViewController {
         logoutButton.layer.borderWidth = 3
         logoutButton.layer.borderColor = CGColor(red: 233/255, green: 173/255, blue: 95/255, alpha: 1)
         
-        helpLabel.text = "총괄 : 디자인\n디자인 : 장평화, 백승민(도움)\niOS : 이정우\n불만 사항 있을 시 3-7로 오세요"
+        helpLabel.text = "총괄 : 최우진\n디자인 : 장평화, 백승민(도움)\niOS : 이정우\n불만 사항 있을 시 3-7로 오세요"
 
         // Do any additional setup after loading the view.
     }

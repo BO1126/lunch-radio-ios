@@ -3,12 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		423B814127204DB50001AB19 /* DungGeunMo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 423B814027204DB50001AB19 /* DungGeunMo.ttf */; };
 		423B81442720D3110001AB19 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423B81432720D3110001AB19 /* SettingViewController.swift */; };
+		423B81462720D9880001AB19 /* CheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423B81452720D9880001AB19 /* CheckViewController.swift */; };
+		423B81482720DFD40001AB19 /* LunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423B81472720DFD40001AB19 /* LunchViewController.swift */; };
+		426D0FD92721264E0074470E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426D0FD82721264E0074470E /* RegisterViewController.swift */; };
+		426D0FDB27213DC60074470E /* TeacherCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426D0FDA27213DC60074470E /* TeacherCheckViewController.swift */; };
+		426D0FDD272194DA0074470E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 426D0FDC272194DA0074470E /* GoogleService-Info.plist */; };
 		4283AFC2272043370019A066 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4283AFC1272043370019A066 /* MainTabBarViewController.swift */; };
 		429316FE270D1BC70004DEED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429316FD270D1BC70004DEED /* AppDelegate.swift */; };
 		42931700270D1BC70004DEED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429316FF270D1BC70004DEED /* SceneDelegate.swift */; };
@@ -16,11 +21,17 @@
 		42931705270D1BC70004DEED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42931703270D1BC70004DEED /* Main.storyboard */; };
 		42931707270D1BC80004DEED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42931706270D1BC80004DEED /* Assets.xcassets */; };
 		4293170A270D1BC80004DEED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42931708270D1BC80004DEED /* LaunchScreen.storyboard */; };
+		84624504784739B53C9A0E9E /* Pods_LunchRadio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4425D210A5D16EF66F8F00C4 /* Pods_LunchRadio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		423B814027204DB50001AB19 /* DungGeunMo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = DungGeunMo.ttf; path = ../../../../../../Downloads/DungGeunMo.ttf; sourceTree = "<group>"; };
 		423B81432720D3110001AB19 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		423B81452720D9880001AB19 /* CheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckViewController.swift; sourceTree = "<group>"; };
+		423B81472720DFD40001AB19 /* LunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchViewController.swift; sourceTree = "<group>"; };
+		426D0FD82721264E0074470E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		426D0FDA27213DC60074470E /* TeacherCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherCheckViewController.swift; sourceTree = "<group>"; };
+		426D0FDC272194DA0074470E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4283AFC1272043370019A066 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		429316FA270D1BC70004DEED /* LunchRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunchRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		429316FD270D1BC70004DEED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +41,9 @@
 		42931706270D1BC80004DEED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42931709270D1BC80004DEED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4293170B270D1BC80004DEED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4425D210A5D16EF66F8F00C4 /* Pods_LunchRadio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LunchRadio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88090AFA2B67F61823806C33 /* Pods-LunchRadio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunchRadio.debug.xcconfig"; path = "Target Support Files/Pods-LunchRadio/Pods-LunchRadio.debug.xcconfig"; sourceTree = "<group>"; };
+		F3B98E716FE13223818A5E28 /* Pods-LunchRadio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunchRadio.release.xcconfig"; path = "Target Support Files/Pods-LunchRadio/Pods-LunchRadio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84624504784739B53C9A0E9E /* Pods_LunchRadio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,8 +70,12 @@
 			isa = PBXGroup;
 			children = (
 				42931701270D1BC70004DEED /* ViewController.swift */,
-				4283AFC1272043370019A066 /* MainTabBarViewController.swift */,
+				423B81452720D9880001AB19 /* CheckViewController.swift */,
 				423B81432720D3110001AB19 /* SettingViewController.swift */,
+				423B81472720DFD40001AB19 /* LunchViewController.swift */,
+				4283AFC1272043370019A066 /* MainTabBarViewController.swift */,
+				426D0FD82721264E0074470E /* RegisterViewController.swift */,
+				426D0FDA27213DC60074470E /* TeacherCheckViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -66,6 +85,8 @@
 			children = (
 				429316FC270D1BC70004DEED /* LunchRadio */,
 				429316FB270D1BC70004DEED /* Products */,
+				9ACBD2671B1829B599215394 /* Pods */,
+				CBBD57998484ABA64CEE22A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,8 +109,26 @@
 				42931706270D1BC80004DEED /* Assets.xcassets */,
 				42931708270D1BC80004DEED /* LaunchScreen.storyboard */,
 				4293170B270D1BC80004DEED /* Info.plist */,
+				426D0FDC272194DA0074470E /* GoogleService-Info.plist */,
 			);
 			path = LunchRadio;
+			sourceTree = "<group>";
+		};
+		9ACBD2671B1829B599215394 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				88090AFA2B67F61823806C33 /* Pods-LunchRadio.debug.xcconfig */,
+				F3B98E716FE13223818A5E28 /* Pods-LunchRadio.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CBBD57998484ABA64CEE22A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4425D210A5D16EF66F8F00C4 /* Pods_LunchRadio.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,9 +138,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4293170E270D1BC80004DEED /* Build configuration list for PBXNativeTarget "LunchRadio" */;
 			buildPhases = (
+				34E29FA411EB34556CF46A72 /* [CP] Check Pods Manifest.lock */,
 				429316F6270D1BC70004DEED /* Sources */,
 				429316F7270D1BC70004DEED /* Frameworks */,
 				429316F8270D1BC70004DEED /* Resources */,
+				556D4307D492ABF49A80E324 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,7 +169,7 @@
 				};
 			};
 			buildConfigurationList = 429316F5270D1BC70004DEED /* Build configuration list for PBXProject "LunchRadio" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -152,12 +193,55 @@
 			files = (
 				4293170A270D1BC80004DEED /* LaunchScreen.storyboard in Resources */,
 				42931707270D1BC80004DEED /* Assets.xcassets in Resources */,
+				426D0FDD272194DA0074470E /* GoogleService-Info.plist in Resources */,
 				42931705270D1BC70004DEED /* Main.storyboard in Resources */,
 				423B814127204DB50001AB19 /* DungGeunMo.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34E29FA411EB34556CF46A72 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LunchRadio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		556D4307D492ABF49A80E324 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LunchRadio/Pods-LunchRadio-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LunchRadio/Pods-LunchRadio-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LunchRadio/Pods-LunchRadio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		429316F6270D1BC70004DEED /* Sources */ = {
@@ -167,6 +251,10 @@
 				423B81442720D3110001AB19 /* SettingViewController.swift in Sources */,
 				42931702270D1BC70004DEED /* ViewController.swift in Sources */,
 				4283AFC2272043370019A066 /* MainTabBarViewController.swift in Sources */,
+				426D0FDB27213DC60074470E /* TeacherCheckViewController.swift in Sources */,
+				426D0FD92721264E0074470E /* RegisterViewController.swift in Sources */,
+				423B81482720DFD40001AB19 /* LunchViewController.swift in Sources */,
+				423B81462720D9880001AB19 /* CheckViewController.swift in Sources */,
 				429316FE270D1BC70004DEED /* AppDelegate.swift in Sources */,
 				42931700270D1BC70004DEED /* SceneDelegate.swift in Sources */,
 			);
@@ -312,6 +400,7 @@
 		};
 		4293170F270D1BC80004DEED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88090AFA2B67F61823806C33 /* Pods-LunchRadio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -342,6 +431,7 @@
 		};
 		42931710270D1BC80004DEED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3B98E716FE13223818A5E28 /* Pods-LunchRadio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
