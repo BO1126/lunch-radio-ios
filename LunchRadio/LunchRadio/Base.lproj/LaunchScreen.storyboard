@@ -7,11 +7,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="DungGeunMo.ttf">
-            <string>DungGeunMo</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -28,23 +23,24 @@
                                     <constraint firstAttribute="width" constant="414" id="fQQ-YC-k5l"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="급식무전기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sZ-fY-dKg">
-                                <rect key="frame" x="57" y="637" width="300" height="60"/>
-                                <fontDescription key="fontDescription" name="DungGeunMo" family="DungGeunMo" pointSize="60"/>
-                                <color key="textColor" name="AccentColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchTitle" translatesAutoresizingMaskIntoConstraints="NO" id="33Q-Mb-emP">
+                                <rect key="frame" x="54" y="617" width="306" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="pHB-HX-l1D"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="BaseColor"/>
                         <constraints>
                             <constraint firstItem="Hqc-Hx-QUr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6Qg-gD-if1"/>
-                            <constraint firstItem="7sZ-fY-dKg" firstAttribute="top" secondItem="Hqc-Hx-QUr" secondAttribute="bottom" constant="30" id="YEW-9w-h1O"/>
+                            <constraint firstItem="33Q-Mb-emP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="ZFL-B3-tLp"/>
                             <constraint firstItem="Hqc-Hx-QUr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="cuz-ZV-k2F"/>
+                            <constraint firstItem="33Q-Mb-emP" firstAttribute="top" secondItem="Hqc-Hx-QUr" secondAttribute="bottom" constant="10" id="kgE-Mz-KeV"/>
                             <constraint firstItem="Hqc-Hx-QUr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uRm-dj-uFL"/>
                             <constraint firstItem="Hqc-Hx-QUr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wz0-Qz-aWM"/>
                             <constraint firstItem="Hqc-Hx-QUr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xbw-Qb-Bkv"/>
-                            <constraint firstItem="7sZ-fY-dKg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="zoM-hr-WNw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="33Q-Mb-emP" secondAttribute="trailing" constant="54" id="yPn-QN-xBG"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -55,9 +51,7 @@
     </scenes>
     <resources>
         <image name="LaunchRadio" width="1080" height="1400"/>
-        <namedColor name="AccentColor">
-            <color red="0.90980392156862744" green="0.67843137254901964" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="LaunchTitle" width="972" height="230"/>
         <namedColor name="BaseColor">
             <color red="0.070588235294117646" green="0.094117647058823528" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

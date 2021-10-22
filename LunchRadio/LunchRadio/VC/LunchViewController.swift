@@ -55,7 +55,7 @@ class LunchViewController: UIViewController {
                     let removeDotString : String = removeNumberString.replacingOccurrences(of: ".", with: "")
                     self.todayLabel.text = removeDotString
                 }else{
-                    self.todayLabel.text = "X"
+                    self.todayLabel.text = "오늘은 급식이 없습니다"
                 }
             default:
                 return
@@ -85,7 +85,7 @@ class LunchViewController: UIViewController {
                     let removeDotString : String = removeNumberString.replacingOccurrences(of: ".", with: "")
                     self.tomorrowLabel.text = removeDotString
                 }else{
-                    self.tomorrowLabel.text = "X"
+                    self.tomorrowLabel.text = "내일은 급식이 없습니다"
                 }
             default:
                 return

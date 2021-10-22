@@ -1,14 +1,14 @@
 //
-//  ViewController.swift
+//  TeacherLoginViewController.swift
 //  LunchRadio
 //
-//  Created by 이정우 on 2021/10/06.
+//  Created by 이정우 on 2021/10/22.
 //
 
 import UIKit
 import FirebaseAuth
 
-class ViewController: UIViewController {
+class TeacherLoginViewController: UIViewController {
     
     @IBOutlet weak var mainView : UIView!
     @IBOutlet weak var studentButton : UIButton!
@@ -69,14 +69,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func touchLoginButton(){
-        Auth.auth().signIn(withEmail: emailTextfield.text!, password: passwordTextfield.text!){
-            (user, error) in
-            if user != nil{
+        if(emailTextfield.text! == "smc02315@gmail.com" && passwordTextfield.text! == "smcteacher"){
+            Auth.auth().signIn(withEmail: emailTextfield.text!, password: passwordTextfield.text!){
+                (user, error) in
+                if user != nil{
                     print("login success")
                 }
                 else{
                     print("login fail")
                 }
+            }
+        }else{
+            print("login fail")
         }
     }
 

@@ -75,13 +75,13 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이메일 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VDD-S7-KFw">
                                         <rect key="frame" x="162" y="164" width="162" height="34"/>
                                         <color key="textColor" name="WhiteColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ipw-do-Vtr">
                                         <rect key="frame" x="161" y="206" width="163" height="30.5"/>
                                         <color key="textColor" name="WhiteColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEl-HO-odX">
@@ -97,6 +97,7 @@
                                             <color key="baseBackgroundColor" name="BaseColor"/>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="touchLoginButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="tva-d4-Vpp"/>
                                             <segue destination="GXf-fS-ZKX" kind="presentation" modalPresentationStyle="fullScreen" id="dNv-iG-gAC"/>
                                         </connections>
                                     </button>
@@ -348,6 +349,9 @@
                                             <color key="baseForegroundColor" name="AccentColor"/>
                                             <color key="baseBackgroundColor" name="BaseColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="touchRegisterButton" destination="WeQ-mk-iCo" eventType="touchUpInside" id="GPo-EA-p2W"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7un-8l-Ird">
                                         <rect key="frame" x="192" y="151" width="132" height="34"/>
@@ -404,10 +408,27 @@
                                     <constraint firstItem="0Ts-SZ-A4A" firstAttribute="leading" secondItem="ZeF-f7-Znk" secondAttribute="leading" constant="110" id="wpu-ID-j8d"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRV-Gl-evd">
+                                <rect key="frame" x="10" y="44" width="60" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fyn-iC-Lwx"/>
+                                    <constraint firstAttribute="width" constant="60" id="sdc-CN-EXk"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="취소">
+                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                    <color key="baseBackgroundColor" name="BaseColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="touchDismissButton" destination="WeQ-mk-iCo" eventType="touchUpInside" id="tEC-ju-pr1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bWT-oN-vEt"/>
                         <color key="backgroundColor" name="BaseColor"/>
                         <constraints>
+                            <constraint firstItem="TRV-Gl-evd" firstAttribute="top" secondItem="bWT-oN-vEt" secondAttribute="top" id="7ri-dW-rQk"/>
+                            <constraint firstItem="TRV-Gl-evd" firstAttribute="leading" secondItem="bWT-oN-vEt" secondAttribute="leading" constant="10" id="9Gh-0S-MbP"/>
                             <constraint firstItem="bWT-oN-vEt" firstAttribute="trailing" secondItem="ZeF-f7-Znk" secondAttribute="trailing" constant="20" id="9Lk-DK-SlN"/>
                             <constraint firstItem="bWT-oN-vEt" firstAttribute="bottom" secondItem="ZeF-f7-Znk" secondAttribute="bottom" constant="223" id="W8i-JL-6Ct"/>
                             <constraint firstItem="ZeF-f7-Znk" firstAttribute="top" secondItem="bWT-oN-vEt" secondAttribute="top" constant="160" id="t6T-5W-iU6"/>
@@ -415,8 +436,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dismissButton" destination="TRV-Gl-evd" id="iq9-Vx-YxO"/>
+                        <outlet property="emailTextfield" destination="3a0-eq-HrK" id="C1v-fM-sUe"/>
                         <outlet property="mainView" destination="ZeF-f7-Znk" id="VYD-L9-mHX"/>
+                        <outlet property="nameTextfield" destination="EdR-HO-pWR" id="QLV-JR-BJb"/>
+                        <outlet property="passwordCheckTextfield" destination="G4P-lu-gso" id="ASU-hr-Ene"/>
+                        <outlet property="passwordTextfield" destination="7un-8l-Ird" id="ES2-Up-aeK"/>
                         <outlet property="registerButton" destination="WOq-7Y-LBn" id="goS-qg-Vxs"/>
+                        <outlet property="studentNumTextfield" destination="ot4-xF-FAd" id="34i-yY-M9B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1lP-oa-eax" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -443,6 +470,9 @@
                                     <color key="baseForegroundColor" name="AccentColor"/>
                                     <color key="baseBackgroundColor" name="BaseColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="bwU-Kh-jnF"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ub-op-Sf8">
                                 <rect key="frame" x="190.5" y="614" width="33" height="16"/>
@@ -577,10 +607,10 @@
             </objects>
             <point key="canvasLocation" x="-233" y="149"/>
         </scene>
-        <!--View Controller-->
+        <!--Teacher Login View Controller-->
         <scene sceneID="5iZ-FG-7FP">
             <objects>
-                <viewController id="TJj-2d-UyY" customClass="ViewController" customModule="LunchRadio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TJj-2d-UyY" customClass="TeacherLoginViewController" customModule="LunchRadio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fQk-tH-JcP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -644,13 +674,13 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이메일 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G2k-yE-vTB">
                                         <rect key="frame" x="162" y="164" width="162" height="35"/>
                                         <color key="textColor" name="WhiteColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Upm-Fv-pMS">
                                         <rect key="frame" x="161" y="207" width="163" height="30.5"/>
                                         <color key="textColor" name="WhiteColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pds-wJ-y2j">
@@ -666,6 +696,7 @@
                                             <color key="baseBackgroundColor" name="BaseColor"/>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="touchLoginButton" destination="TJj-2d-UyY" eventType="touchUpInside" id="3Et-mO-b6K"/>
                                             <segue destination="zYj-Wc-btd" kind="presentation" modalPresentationStyle="fullScreen" id="AfQ-jN-tpC"/>
                                         </connections>
                                     </button>
@@ -676,7 +707,7 @@
                                         <state key="normal" image="square" catalog="system"/>
                                         <state key="selected" image="checkmark.square" catalog="system"/>
                                         <connections>
-                                            <action selector="touchAutoLoginButton" destination="TJj-2d-UyY" eventType="touchUpInside" id="gN0-D0-YvV"/>
+                                            <action selector="touchAutoLoginButton" destination="TJj-2d-UyY" eventType="touchUpInside" id="eSK-qz-06g"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인 정보 기억하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buO-QO-Tdm">
@@ -729,13 +760,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="autoLoginToggleButton" destination="BlX-wv-or7" id="oGJ-QT-pYF"/>
-                        <outlet property="emailTextfield" destination="G2k-yE-vTB" id="Ti5-ev-plg"/>
-                        <outlet property="loginButton" destination="pds-wJ-y2j" id="Ivd-9J-XPo"/>
-                        <outlet property="mainView" destination="R6e-St-bDe" id="X9V-zK-eJh"/>
-                        <outlet property="passwordTextfield" destination="Upm-Fv-pMS" id="ldq-fr-XkQ"/>
-                        <outlet property="studentButton" destination="25D-sD-Zsp" id="9t4-re-R0C"/>
-                        <outlet property="teacherButton" destination="SiV-Zo-LcF" id="QBw-Wm-2sG"/>
+                        <outlet property="autoLoginToggleButton" destination="BlX-wv-or7" id="mgq-ee-qnu"/>
+                        <outlet property="emailTextfield" destination="G2k-yE-vTB" id="lWu-h4-Vx5"/>
+                        <outlet property="loginButton" destination="pds-wJ-y2j" id="cRv-xG-kdo"/>
+                        <outlet property="mainView" destination="R6e-St-bDe" id="bgg-RL-Mrh"/>
+                        <outlet property="passwordTextfield" destination="Upm-Fv-pMS" id="sKg-ph-q81"/>
+                        <outlet property="studentButton" destination="25D-sD-Zsp" id="wcW-Of-qw8"/>
+                        <outlet property="teacherButton" destination="SiV-Zo-LcF" id="Skd-le-zM4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwN-cI-eyd" sceneMemberID="firstResponder"/>
@@ -846,6 +877,9 @@
                                     <color key="baseForegroundColor" name="AccentColor"/>
                                     <color key="baseBackgroundColor" name="BaseColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="Ha7-ez-opE"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8n3-Rk-5QK">
                                 <rect key="frame" x="190.5" y="614" width="33" height="16"/>
@@ -900,7 +934,7 @@
         <!--확인-->
         <scene sceneID="38Q-R9-mVW">
             <objects>
-                <viewController id="g0p-5y-rBM" sceneMemberID="viewController">
+                <viewController id="g0p-5y-rBM" customClass="TeacherCheckViewController" customModule="LunchRadio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XR9-Qc-MD4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -908,38 +942,46 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uwj-aP-CkF">
                                 <rect key="frame" x="57" y="144" width="300" height="250"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mM2-uT-cbg">
-                                        <rect key="frame" x="185" y="108" width="32" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mM2-uT-cbg">
+                                        <rect key="frame" x="182" y="110.5" width="32" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="U9t-48-YNh"/>
+                                        </constraints>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="학년" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ilq-Sn-PYg">
-                                        <rect key="frame" x="135" y="114.5" width="30" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="122" y="111.5" width="40" height="27.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <color key="textColor" name="AccentColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="반" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4A-01-Zsn">
-                                        <rect key="frame" x="232" y="114.5" width="15" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="229" y="111.5" width="20" height="27.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <color key="textColor" name="AccentColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uyf-K0-QEa">
-                                        <rect key="frame" x="93" y="108" width="32" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uyf-K0-QEa">
+                                        <rect key="frame" x="80" y="110.5" width="32" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="58j-B4-qdR"/>
+                                        </constraints>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" name="BaseColor"/>
                                 <constraints>
                                     <constraint firstItem="Ilq-Sn-PYg" firstAttribute="centerY" secondItem="Uwj-aP-CkF" secondAttribute="centerY" id="DLi-4m-qCS"/>
-                                    <constraint firstItem="x4A-01-Zsn" firstAttribute="leading" secondItem="mM2-uT-cbg" secondAttribute="trailing" constant="15" id="HGs-KW-OtH"/>
                                     <constraint firstItem="Ilq-Sn-PYg" firstAttribute="leading" secondItem="uyf-K0-QEa" secondAttribute="trailing" constant="10" id="Zkw-YA-uNR"/>
-                                    <constraint firstItem="mM2-uT-cbg" firstAttribute="leading" secondItem="Ilq-Sn-PYg" secondAttribute="trailing" constant="20" id="bCw-fT-H3q"/>
+                                    <constraint firstItem="uyf-K0-QEa" firstAttribute="leading" secondItem="Uwj-aP-CkF" secondAttribute="leading" constant="80" id="dlG-2j-ZkQ"/>
                                     <constraint firstItem="mM2-uT-cbg" firstAttribute="centerY" secondItem="Uwj-aP-CkF" secondAttribute="centerY" id="ens-yE-Ge0"/>
+                                    <constraint firstItem="mM2-uT-cbg" firstAttribute="leading" secondItem="Ilq-Sn-PYg" secondAttribute="trailing" constant="20" id="grz-MN-KhB"/>
                                     <constraint firstItem="x4A-01-Zsn" firstAttribute="centerY" secondItem="Uwj-aP-CkF" secondAttribute="centerY" id="iC5-3w-tFY"/>
-                                    <constraint firstItem="Ilq-Sn-PYg" firstAttribute="centerX" secondItem="Uwj-aP-CkF" secondAttribute="centerX" id="kjt-0H-juh"/>
+                                    <constraint firstItem="x4A-01-Zsn" firstAttribute="leading" secondItem="mM2-uT-cbg" secondAttribute="trailing" constant="15" id="syb-2z-hdo"/>
                                     <constraint firstItem="uyf-K0-QEa" firstAttribute="centerY" secondItem="Uwj-aP-CkF" secondAttribute="centerY" id="wlO-8N-07g"/>
                                 </constraints>
                             </view>
@@ -987,6 +1029,13 @@
                     <tabBarItem key="tabBarItem" title="확인" image="RadioNotiIcon" id="Jtk-no-owQ">
                         <inset key="imageInsets" minX="16" minY="16" maxX="16" maxY="16"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="classTextfield" destination="mM2-uT-cbg" id="hra-q5-iQ3"/>
+                        <outlet property="finishButton" destination="vyO-p3-NMi" id="JdK-hh-fSb"/>
+                        <outlet property="gradeTextfield" destination="uyf-K0-QEa" id="IZ9-UF-xIz"/>
+                        <outlet property="mainView" destination="Uwj-aP-CkF" id="EPy-Te-Qld"/>
+                        <outlet property="pushButton" destination="lTE-5g-1kn" id="PMK-5n-ZE9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BB9-It-2Kl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1014,6 +1063,9 @@
             <point key="canvasLocation" x="-233" y="2313"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qwq-g7-D3B"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="RadioLunchIcon" width="42" height="73"/>
         <image name="RadioNotiIcon" width="60" height="58"/>
