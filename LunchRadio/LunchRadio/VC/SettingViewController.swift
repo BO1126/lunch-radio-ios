@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SettingViewController: UIViewController {
     
@@ -31,5 +32,15 @@ class SettingViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func touchLogoutButton(){
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            self.dismiss(animated: true)
+            
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
+        }
+    }
 
 }

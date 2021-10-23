@@ -17,12 +17,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var autoLoginToggleButton : UIButton!
     @IBOutlet weak var emailTextfield : UITextField!
     @IBOutlet weak var passwordTextfield : UITextField!
+    @IBOutlet weak var loginFailedLabel : UILabel!
+    
+    let border = CALayer()
+    let border2 = CALayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        if let user = Auth.auth().currentUser {
+        self.view.addSubview(self.activityIndicator)
+
+        if Auth.auth().currentUser != nil {
             
         }
         
@@ -46,22 +51,17 @@ class ViewController: UIViewController {
         loginButton.layer.borderWidth = 3
         loginButton.layer.borderColor = CGColor(red: 233/255, green: 173/255, blue: 95/255, alpha: 1)
         
-        let border = CALayer()
-        border.frame = CGRect(x: 0, y: emailTextfield.frame.size.height-1, width: emailTextfield.frame.width, height: 1)
-        border.backgroundColor = UIColor.white.cgColor
+        self.border.frame = CGRect(x: 0, y: emailTextfield.frame.size.height-1, width: emailTextfield.frame.width, height: 1)
+        self.border.backgroundColor = UIColor.white.cgColor
         
-        emailTextfield.layer.addSublayer(border)
+        emailTextfield.layer.addSublayer(self.border)
         emailTextfield.attributedPlaceholder = NSAttributedString(string: "이메일 입력", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
         
-        let border2 = CALayer()
-        border2.frame = CGRect(x: 0, y: passwordTextfield.frame.size.height-1, width: passwordTextfield.frame.width, height: 1)
-        border2.backgroundColor = UIColor.white.cgColor
+        self.border2.frame = CGRect(x: 0, y: passwordTextfield.frame.size.height-1, width: passwordTextfield.frame.width, height: 1)
+        self.border2.backgroundColor = UIColor.white.cgColor
         
-        passwordTextfield.layer.addSublayer(border2)
+        passwordTextfield.layer.addSublayer(self.border2)
         passwordTextfield.attributedPlaceholder = NSAttributedString(string: "비밀번호 입력", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
-        
-        
-        
     }
     
     @IBAction func touchAutoLoginButton(){
@@ -69,16 +69,39 @@ class ViewController: UIViewController {
     }
     
     @IBAction func touchLoginButton(){
+        activityIndicator.startAnimating()
         Auth.auth().signIn(withEmail: emailTextfield.text!, password: passwordTextfield.text!){
             (user, error) in
             if user != nil{
-                    print("login success")
+                    let view = self.storyboard?.instantiateViewController(withIdentifier: "StudentVC")
+                    view?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+                    view?.modalPresentationStyle = .fullScreen
+                    self.present(view!, animated: true, completion: nil)
                 }
                 else{
-                    print("login fail")
+                    self.border.backgroundColor = UIColor.red.cgColor
+                    self.border2.backgroundColor = UIColor.red.cgColor
+                    self.emailTextfield.attributedPlaceholder = NSAttributedString(string: "이메일 입력", attributes: [NSAttributedString.Key.foregroundColor : UIColor.red])
+                    self.passwordTextfield.attributedPlaceholder = NSAttributedString(string: "비밀번호 입력", attributes: [NSAttributedString.Key.foregroundColor : UIColor.red])
+                    self.loginFailedLabel.text = "이메일과 비밀번호가 일치하지 않습니다!"
+                    
                 }
+            self.activityIndicator.stopAnimating()
         }
     }
+    
+    lazy var activityIndicator: UIActivityIndicatorView = {
+            // Create an indicator.
+            let activityIndicator = UIActivityIndicatorView()
+            activityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+            activityIndicator.center = self.view.center
+            activityIndicator.color = UIColor.gray
+            // Also show the indicator even when the animation is stopped.
+            activityIndicator.hidesWhenStopped = true
+            activityIndicator.style = UIActivityIndicatorView.Style.medium
+            // Start animation.
+            activityIndicator.stopAnimating()
+            return activityIndicator }()
 
 
 }

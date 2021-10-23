@@ -75,10 +75,10 @@
 				423B81452720D9880001AB19 /* CheckViewController.swift */,
 				423B81432720D3110001AB19 /* SettingViewController.swift */,
 				423B81472720DFD40001AB19 /* LunchViewController.swift */,
-				4283AFC1272043370019A066 /* MainTabBarViewController.swift */,
 				426D0FD82721264E0074470E /* RegisterViewController.swift */,
 				426D0FDA27213DC60074470E /* TeacherCheckViewController.swift */,
 				423CC31F272269790089074E /* TeacherLoginViewController.swift */,
+				4283AFC1272043370019A066 /* MainTabBarViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";

@@ -15,6 +15,7 @@ class TeacherCheckViewController: UIViewController {
     @IBOutlet weak var gradeTextfield : UITextField!
     @IBOutlet weak var classTextfield : UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
