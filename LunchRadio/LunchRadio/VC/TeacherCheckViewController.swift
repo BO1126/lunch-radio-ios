@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class TeacherCheckViewController: UIViewController {
 
@@ -15,6 +16,7 @@ class TeacherCheckViewController: UIViewController {
     @IBOutlet weak var gradeTextfield : UITextField!
     @IBOutlet weak var classTextfield : UITextField!
     
+    let ref = Database.database().reference()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +49,15 @@ class TeacherCheckViewController: UIViewController {
         classTextfield.layer.addSublayer(border2)
 
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func touchPuchButton(){
+        if(gradeTextfield.text != "" && classTextfield.text != ""){
+            ref.child("nowclass").child("NowClass").setValue(["grade":gradeTextfield.text, "number":classTextfield.text])
+        }else{
+            
+        }
+        
     }
 
 

@@ -586,6 +586,9 @@
                                     <color key="baseForegroundColor" name="AccentColor"/>
                                     <color key="baseBackgroundColor" name="BaseColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="touchReloadButton" destination="aV5-6p-6VN" eventType="touchUpInside" id="YGQ-8L-IhC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MiF-6Z-ghq"/>
@@ -1026,6 +1029,9 @@
                                     <color key="baseForegroundColor" name="AccentColor"/>
                                     <color key="baseBackgroundColor" name="BaseColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="touchPuchButton" destination="g0p-5y-rBM" eventType="touchUpInside" id="uAK-aP-2ve"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyO-p3-NMi">
                                 <rect key="frame" x="147" y="624" width="120" height="50"/>
