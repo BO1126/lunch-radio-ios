@@ -559,9 +559,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lW6-Un-8oM">
                                 <rect key="frame" x="57" y="144" width="300" height="250"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지금은 점심 시간이 아닙니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KY-jJ-15U">
-                                        <rect key="frame" x="9" y="110" width="282" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지금은 점심 시간이 아닙니다" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KY-jJ-15U">
+                                        <rect key="frame" x="1" y="109" width="298.5" height="32.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <color key="textColor" name="AccentColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1008,6 +1008,7 @@
                                 <color key="backgroundColor" name="BaseColor"/>
                                 <constraints>
                                     <constraint firstItem="Ilq-Sn-PYg" firstAttribute="centerY" secondItem="Uwj-aP-CkF" secondAttribute="centerY" id="DLi-4m-qCS"/>
+                                    <constraint firstAttribute="height" constant="250" id="Ueh-E3-jdf"/>
                                     <constraint firstItem="Ilq-Sn-PYg" firstAttribute="leading" secondItem="uyf-K0-QEa" secondAttribute="trailing" constant="10" id="Zkw-YA-uNR"/>
                                     <constraint firstItem="uyf-K0-QEa" firstAttribute="leading" secondItem="Uwj-aP-CkF" secondAttribute="leading" constant="80" id="dlG-2j-ZkQ"/>
                                     <constraint firstItem="mM2-uT-cbg" firstAttribute="centerY" secondItem="Uwj-aP-CkF" secondAttribute="centerY" id="ens-yE-Ge0"/>
@@ -1045,6 +1046,9 @@
                                     <color key="baseForegroundColor" name="AccentColor"/>
                                     <color key="baseBackgroundColor" name="BaseColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="touchFinishButton" destination="g0p-5y-rBM" eventType="touchUpInside" id="FIY-Hm-0YH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xay-KB-56u"/>

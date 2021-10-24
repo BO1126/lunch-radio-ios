@@ -37,7 +37,11 @@ class CheckViewController: UIViewController {
             let value = snapshot.value as! [String : String]
             let grade : String = value["grade"]!
             let number : String = value["number"]!
-            self.checkLabel.text = "지금은\n\(grade)학년 \(number)반\n입니다."
+            if(grade == "0" && number == "0"){
+                self.checkLabel.text = "지금은\n점심시간이\n아닙니다"
+            }else{
+                self.checkLabel.text = "지금은\n\(grade)학년 \(number)반\n입니다."
+            }
         }
         
         
@@ -46,7 +50,6 @@ class CheckViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         activityIndicator.startAnimating()
-        print("aa")
         ref.child("nowclass").child("NowClass").observe(.value){
             snapshot in
             let value = snapshot.value as! [String : String]

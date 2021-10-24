@@ -26,10 +26,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.view.addSubview(self.activityIndicator)
-
-        if Auth.auth().currentUser != nil {
-            
-        }
         
         mainView.clipsToBounds = true
         mainView.layer.cornerRadius = 30
@@ -62,6 +58,21 @@ class ViewController: UIViewController {
         
         passwordTextfield.layer.addSublayer(self.border2)
         passwordTextfield.attributedPlaceholder = NSAttributedString(string: "비밀번호 입력", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
+        
+        if Auth.auth().currentUser != nil {
+            if(Auth.auth().currentUser?.uid == "4GyQYMeCpMRelvS4nRWuBkeyIkH3"){
+                let view = self.storyboard?.instantiateViewController(withIdentifier: "TeacherVC")
+                view?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+                view?.modalPresentationStyle = .fullScreen
+                self.present(view!, animated: true, completion: nil)
+            }else{
+                let view = self.storyboard?.instantiateViewController(withIdentifier: "StudentVC")
+                view?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+                view?.modalPresentationStyle = .fullScreen
+                self.present(view!, animated: true, completion: nil)
+            }
+        }
+        
     }
     
     @IBAction func touchAutoLoginButton(){

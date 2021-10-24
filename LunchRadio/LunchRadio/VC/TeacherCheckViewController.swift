@@ -59,6 +59,14 @@ class TeacherCheckViewController: UIViewController {
         }
         
     }
+    
+    @IBAction func touchFinishButton(){
+        if(gradeTextfield.text != "" && classTextfield.text != ""){
+            ref.child("nowclass").child("NowClass").setValue(["grade":"0", "number":"0"])
+        }else{
+            
+        }
+    }
 
 
 }
