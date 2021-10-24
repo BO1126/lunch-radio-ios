@@ -126,5 +126,9 @@ class RegisterViewController: UIViewController {
     @IBAction func touchDismissButton(){
         dismiss(animated: true)
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+          self.view.endEditing(true)
+    }
 
 }

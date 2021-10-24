@@ -15,7 +15,6 @@
 		426D0FD92721264E0074470E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426D0FD82721264E0074470E /* RegisterViewController.swift */; };
 		426D0FDB27213DC60074470E /* TeacherCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426D0FDA27213DC60074470E /* TeacherCheckViewController.swift */; };
 		426D0FDD272194DA0074470E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 426D0FDC272194DA0074470E /* GoogleService-Info.plist */; };
-		4283AFC2272043370019A066 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4283AFC1272043370019A066 /* MainTabBarViewController.swift */; };
 		429316FE270D1BC70004DEED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429316FD270D1BC70004DEED /* AppDelegate.swift */; };
 		42931700270D1BC70004DEED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429316FF270D1BC70004DEED /* SceneDelegate.swift */; };
 		42931702270D1BC70004DEED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42931701270D1BC70004DEED /* ViewController.swift */; };
@@ -34,7 +33,6 @@
 		426D0FD82721264E0074470E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		426D0FDA27213DC60074470E /* TeacherCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherCheckViewController.swift; sourceTree = "<group>"; };
 		426D0FDC272194DA0074470E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		4283AFC1272043370019A066 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		429316FA270D1BC70004DEED /* LunchRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunchRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		429316FD270D1BC70004DEED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		429316FF270D1BC70004DEED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 				426D0FD82721264E0074470E /* RegisterViewController.swift */,
 				426D0FDA27213DC60074470E /* TeacherCheckViewController.swift */,
 				423CC31F272269790089074E /* TeacherLoginViewController.swift */,
-				4283AFC1272043370019A066 /* MainTabBarViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -253,7 +250,6 @@
 			files = (
 				423B81442720D3110001AB19 /* SettingViewController.swift in Sources */,
 				42931702270D1BC70004DEED /* ViewController.swift in Sources */,
-				4283AFC2272043370019A066 /* MainTabBarViewController.swift in Sources */,
 				426D0FDB27213DC60074470E /* TeacherCheckViewController.swift in Sources */,
 				426D0FD92721264E0074470E /* RegisterViewController.swift in Sources */,
 				423B81482720DFD40001AB19 /* LunchViewController.swift in Sources */,

@@ -19,16 +19,13 @@ class TeacherLoginViewController: UIViewController {
     @IBOutlet weak var passwordTextfield : UITextField!
     @IBOutlet weak var loginFailedLabel : UILabel!
     
+    var isAutoLogin = false
     let border = CALayer()
     let border2 = CALayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        if let user = Auth.auth().currentUser {
-            
-        }
         
         mainView.clipsToBounds = true
         mainView.layer.cornerRadius = 30
@@ -68,6 +65,11 @@ class TeacherLoginViewController: UIViewController {
     
     @IBAction func touchAutoLoginButton(){
         autoLoginToggleButton.isSelected.toggle()
+        if autoLoginToggleButton.isSelected == true{
+            isAutoLogin = true
+        }else{
+            isAutoLogin = false
+        }
     }
     
     @IBAction func touchLoginButton(){
@@ -75,6 +77,10 @@ class TeacherLoginViewController: UIViewController {
             Auth.auth().signIn(withEmail: emailTextfield.text!, password: passwordTextfield.text!){
                 (user, error) in
                 if user != nil{
+                    if self.isAutoLogin{
+                        UserDefaults.standard.set(self.emailTextfield.text, forKey: "id")
+                        UserDefaults.standard.set(self.passwordTextfield.text, forKey: "pwd")
+                    }
                     let view = self.storyboard?.instantiateViewController(withIdentifier: "TeacherVC")
                     view?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
                     view?.modalPresentationStyle = .fullScreen
@@ -96,7 +102,10 @@ class TeacherLoginViewController: UIViewController {
             self.loginFailedLabel.text = "이메일과 비밀번호가 일치하지 않습니다!"
         }
     }
-
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+          self.view.endEditing(true)
+    }
 
 }
 

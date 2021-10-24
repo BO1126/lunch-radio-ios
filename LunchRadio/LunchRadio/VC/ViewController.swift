@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordTextfield : UITextField!
     @IBOutlet weak var loginFailedLabel : UILabel!
     
+    var isAutoLogin = false
     let border = CALayer()
     let border2 = CALayer()
 
@@ -59,24 +60,36 @@ class ViewController: UIViewController {
         passwordTextfield.layer.addSublayer(self.border2)
         passwordTextfield.attributedPlaceholder = NSAttributedString(string: "비밀번호 입력", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
         
-        if Auth.auth().currentUser != nil {
-            if(Auth.auth().currentUser?.uid == "4GyQYMeCpMRelvS4nRWuBkeyIkH3"){
-                let view = self.storyboard?.instantiateViewController(withIdentifier: "TeacherVC")
-                view?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-                view?.modalPresentationStyle = .fullScreen
-                self.present(view!, animated: true, completion: nil)
-            }else{
-                let view = self.storyboard?.instantiateViewController(withIdentifier: "StudentVC")
-                view?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-                view?.modalPresentationStyle = .fullScreen
-                self.present(view!, animated: true, completion: nil)
+        
+        if let userId = UserDefaults.standard.string(forKey: "id"){
+            self.activityIndicator.startAnimating()
+            Auth.auth().signIn(withEmail: userId, password: UserDefaults.standard.string(forKey: "pwd")!){
+                (user, error) in
+                if Auth.auth().currentUser != nil {
+                    if(Auth.auth().currentUser?.uid == "4GyQYMeCpMRelvS4nRWuBkeyIkH3"){
+                        let view = self.storyboard?.instantiateViewController(withIdentifier: "TeacherVC")
+                        view?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+                        view?.modalPresentationStyle = .fullScreen
+                        self.present(view!, animated: true, completion: nil)
+                    }else{
+                        let view = self.storyboard?.instantiateViewController(withIdentifier: "StudentVC")
+                        view?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+                        view?.modalPresentationStyle = .fullScreen
+                        self.present(view!, animated: true, completion: nil)
+                    }
+                }
+                self.activityIndicator.stopAnimating()
             }
         }
-        
     }
     
     @IBAction func touchAutoLoginButton(){
         autoLoginToggleButton.isSelected.toggle()
+        if autoLoginToggleButton.isSelected == true{
+            isAutoLogin = true
+        }else{
+            isAutoLogin = false
+        }
     }
     
     @IBAction func touchLoginButton(){
@@ -84,6 +97,10 @@ class ViewController: UIViewController {
         Auth.auth().signIn(withEmail: emailTextfield.text!, password: passwordTextfield.text!){
             (user, error) in
             if user != nil{
+                if self.isAutoLogin{
+                    UserDefaults.standard.set(self.emailTextfield.text, forKey: "id")
+                    UserDefaults.standard.set(self.passwordTextfield.text, forKey: "pwd")
+                }
                     let view = self.storyboard?.instantiateViewController(withIdentifier: "StudentVC")
                     view?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
                     view?.modalPresentationStyle = .fullScreen
@@ -113,7 +130,10 @@ class ViewController: UIViewController {
             // Start animation.
             activityIndicator.stopAnimating()
             return activityIndicator }()
-
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+          self.view.endEditing(true)
+    }
 
 }
 

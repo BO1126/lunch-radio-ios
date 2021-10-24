@@ -35,6 +35,8 @@ class SettingViewController: UIViewController {
     @IBAction func touchLogoutButton(){
         let firebaseAuth = Auth.auth()
         do {
+            UserDefaults.standard.removeObject(forKey: "id")
+            UserDefaults.standard.removeObject(forKey: "pwd")
             try firebaseAuth.signOut()
             self.dismiss(animated: true)
             
