@@ -93,28 +93,36 @@ class ViewController: UIViewController {
     }
     
     @IBAction func touchLoginButton(){
-        activityIndicator.startAnimating()
-        Auth.auth().signIn(withEmail: emailTextfield.text!, password: passwordTextfield.text!){
-            (user, error) in
-            if user != nil{
-                if self.isAutoLogin{
-                    UserDefaults.standard.set(self.emailTextfield.text, forKey: "id")
-                    UserDefaults.standard.set(self.passwordTextfield.text, forKey: "pwd")
-                }
-                    let view = self.storyboard?.instantiateViewController(withIdentifier: "StudentVC")
-                    view?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-                    view?.modalPresentationStyle = .fullScreen
-                    self.present(view!, animated: true, completion: nil)
-                }
-                else{
-                    self.border.backgroundColor = UIColor.red.cgColor
-                    self.border2.backgroundColor = UIColor.red.cgColor
-                    self.emailTextfield.attributedPlaceholder = NSAttributedString(string: "이메일 입력", attributes: [NSAttributedString.Key.foregroundColor : UIColor.red])
-                    self.passwordTextfield.attributedPlaceholder = NSAttributedString(string: "비밀번호 입력", attributes: [NSAttributedString.Key.foregroundColor : UIColor.red])
-                    self.loginFailedLabel.text = "이메일과 비밀번호가 일치하지 않습니다!"
-                    
-                }
-            self.activityIndicator.stopAnimating()
+        if(emailTextfield.text! != "smc02315@gmail.com"){
+            activityIndicator.startAnimating()
+            Auth.auth().signIn(withEmail: emailTextfield.text!, password: passwordTextfield.text!){
+                (user, error) in
+                if user != nil{
+                    if self.isAutoLogin{
+                        UserDefaults.standard.set(self.emailTextfield.text, forKey: "id")
+                        UserDefaults.standard.set(self.passwordTextfield.text, forKey: "pwd")
+                    }
+                        let view = self.storyboard?.instantiateViewController(withIdentifier: "StudentVC")
+                        view?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+                        view?.modalPresentationStyle = .fullScreen
+                        self.present(view!, animated: true, completion: nil)
+                    }
+                    else{
+                        self.border.backgroundColor = UIColor.red.cgColor
+                        self.border2.backgroundColor = UIColor.red.cgColor
+                        self.emailTextfield.attributedPlaceholder = NSAttributedString(string: "이메일 입력", attributes: [NSAttributedString.Key.foregroundColor : UIColor.red])
+                        self.passwordTextfield.attributedPlaceholder = NSAttributedString(string: "비밀번호 입력", attributes: [NSAttributedString.Key.foregroundColor : UIColor.red])
+                        self.loginFailedLabel.text = "이메일과 비밀번호가 일치하지 않습니다!"
+                        
+                    }
+                self.activityIndicator.stopAnimating()
+            }
+        }else{
+            self.border.backgroundColor = UIColor.red.cgColor
+            self.border2.backgroundColor = UIColor.red.cgColor
+            self.emailTextfield.attributedPlaceholder = NSAttributedString(string: "이메일 입력", attributes: [NSAttributedString.Key.foregroundColor : UIColor.red])
+            self.passwordTextfield.attributedPlaceholder = NSAttributedString(string: "비밀번호 입력", attributes: [NSAttributedString.Key.foregroundColor : UIColor.red])
+            self.loginFailedLabel.text = "교사 로그인을 이용해주세요!"
         }
     }
     

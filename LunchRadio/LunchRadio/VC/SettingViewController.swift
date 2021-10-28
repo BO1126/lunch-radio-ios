@@ -44,5 +44,30 @@ class SettingViewController: UIViewController {
             print("Error signing out: %@", signOutError)
         }
     }
+    
+    @IBAction func touchDeleteButton(){
+        let alert = UIAlertController(title: "정말로 탈퇴하시겠습니까?", message: "탈퇴 시 급식무전기 서비스 이용이 불가능합니다.", preferredStyle: UIAlertController.Style.alert)
+        
+        let deleteAction = UIAlertAction(title: "탈퇴", style: .destructive){
+            (action) in
+            Auth.auth().currentUser?.delete{
+                error in
+                if let error = error{
+                    print(error)
+                }else{
+                    UserDefaults.standard.removeObject(forKey: "id")
+                    UserDefaults.standard.removeObject(forKey: "pwd")
+                    self.dismiss(animated: true)
+                }
+                
+            }
+        }
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        
+        alert.addAction(cancelAction)
+        alert.addAction(deleteAction)
+        
+        present(alert, animated: true)
+    }
 
 }

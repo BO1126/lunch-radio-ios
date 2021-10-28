@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -475,57 +475,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9JU-qh-y7U">
-                                <rect key="frame" x="147" y="464" width="120" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="gfp-JH-h8j"/>
-                                    <constraint firstAttribute="width" constant="120" id="uM8-qJ-bD2"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="로그아웃">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="23"/>
-                                    <color key="baseForegroundColor" name="AccentColor"/>
-                                    <color key="baseBackgroundColor" name="BaseColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="touchLogoutButton" destination="UOV-lH-y5t" eventType="touchUpInside" id="F2r-I9-5xx"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ub-op-Sf8">
-                                <rect key="frame" x="190.5" y="614" width="33" height="16"/>
+                                <rect key="frame" x="190.5" y="594" width="33" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vku-K3-yuB">
-                                <rect key="frame" x="81" y="184" width="270" height="230"/>
+                                <rect key="frame" x="81" y="294" width="270" height="250"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COMING SOON!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbf-Uc-Zdv">
-                                        <rect key="frame" x="26" y="97" width="218" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="textColor" name="AccentColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9JU-qh-y7U">
+                                        <rect key="frame" x="75" y="140" width="120" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="gfp-JH-h8j"/>
+                                            <constraint firstAttribute="width" constant="120" id="uM8-qJ-bD2"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="로그아웃">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="23"/>
+                                            <color key="baseForegroundColor" name="AccentColor"/>
+                                            <color key="baseBackgroundColor" name="BaseColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="touchLogoutButton" destination="UOV-lH-y5t" eventType="touchUpInside" id="F2r-I9-5xx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSP-un-bqj">
+                                        <rect key="frame" x="95" y="50" width="80" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="WwG-aG-zJA"/>
+                                            <constraint firstAttribute="width" constant="80" id="qnW-Z9-P5g"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="탈퇴하기">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="touchDeleteButton" destination="UOV-lH-y5t" eventType="touchUpInside" id="Sor-2w-HGX"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="BaseColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="230" id="8PF-RU-Q9H"/>
-                                    <constraint firstItem="Gbf-Uc-Zdv" firstAttribute="centerX" secondItem="vku-K3-yuB" secondAttribute="centerX" id="DuN-ku-7dz"/>
+                                    <constraint firstAttribute="height" constant="250" id="8PF-RU-Q9H"/>
+                                    <constraint firstItem="9JU-qh-y7U" firstAttribute="top" secondItem="RSP-un-bqj" secondAttribute="bottom" constant="50" id="D3U-DK-jwe"/>
                                     <constraint firstAttribute="width" constant="270" id="Hpl-xk-PXJ"/>
-                                    <constraint firstItem="Gbf-Uc-Zdv" firstAttribute="centerY" secondItem="vku-K3-yuB" secondAttribute="centerY" id="rib-QI-igE"/>
+                                    <constraint firstItem="RSP-un-bqj" firstAttribute="top" secondItem="vku-K3-yuB" secondAttribute="top" constant="50" id="OIf-Xu-S0u"/>
+                                    <constraint firstItem="9JU-qh-y7U" firstAttribute="centerX" secondItem="vku-K3-yuB" secondAttribute="centerX" id="Vxn-3C-9Sg"/>
+                                    <constraint firstItem="RSP-un-bqj" firstAttribute="centerX" secondItem="vku-K3-yuB" secondAttribute="centerX" id="z88-9f-UdT"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="D4U-DU-HwB"/>
                         <color key="backgroundColor" name="BaseColor"/>
                         <constraints>
-                            <constraint firstItem="9JU-qh-y7U" firstAttribute="top" secondItem="vku-K3-yuB" secondAttribute="bottom" constant="50" id="6LF-OL-D3W"/>
                             <constraint firstItem="vku-K3-yuB" firstAttribute="leading" secondItem="D4U-DU-HwB" secondAttribute="leading" constant="81" id="8UB-d3-oGO"/>
+                            <constraint firstItem="5Ub-op-Sf8" firstAttribute="top" secondItem="vku-K3-yuB" secondAttribute="bottom" constant="50" id="B9r-Qk-cCn"/>
                             <constraint firstItem="5Ub-op-Sf8" firstAttribute="centerX" secondItem="QmA-te-aAn" secondAttribute="centerX" id="Ip2-CT-NSN"/>
-                            <constraint firstItem="9JU-qh-y7U" firstAttribute="centerX" secondItem="QmA-te-aAn" secondAttribute="centerX" id="es9-EN-J89"/>
-                            <constraint firstItem="vku-K3-yuB" firstAttribute="top" secondItem="D4U-DU-HwB" secondAttribute="top" constant="140" id="lke-tj-trm"/>
+                            <constraint firstItem="vku-K3-yuB" firstAttribute="top" secondItem="D4U-DU-HwB" secondAttribute="top" constant="250" id="i1O-Md-ggc"/>
                             <constraint firstItem="D4U-DU-HwB" firstAttribute="trailing" secondItem="vku-K3-yuB" secondAttribute="trailing" constant="63" id="rB8-xw-y6i"/>
-                            <constraint firstItem="5Ub-op-Sf8" firstAttribute="top" secondItem="9JU-qh-y7U" secondAttribute="bottom" constant="100" id="xat-6e-ioi"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="설정" image="RadioSettingIcon" id="ad0-SO-Y96">

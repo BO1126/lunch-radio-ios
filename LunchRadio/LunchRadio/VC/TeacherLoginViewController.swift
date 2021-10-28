@@ -73,7 +73,9 @@ class TeacherLoginViewController: UIViewController {
     }
     
     @IBAction func touchLoginButton(){
+        
         if(emailTextfield.text! == "smc02315@gmail.com" && passwordTextfield.text! == "smcteacher"){
+            activityIndicator.startAnimating()
             Auth.auth().signIn(withEmail: emailTextfield.text!, password: passwordTextfield.text!){
                 (user, error) in
                 if user != nil{
@@ -85,6 +87,7 @@ class TeacherLoginViewController: UIViewController {
                     view?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
                     view?.modalPresentationStyle = .fullScreen
                     self.present(view!, animated: true, completion: nil)
+                    self.activityIndicator.stopAnimating()
                 }
                 else{
                     self.border.backgroundColor = UIColor.red.cgColor
@@ -92,6 +95,7 @@ class TeacherLoginViewController: UIViewController {
                     self.emailTextfield.attributedPlaceholder = NSAttributedString(string: "이메일 입력", attributes: [NSAttributedString.Key.foregroundColor : UIColor.red])
                     self.passwordTextfield.attributedPlaceholder = NSAttributedString(string: "비밀번호 입력", attributes: [NSAttributedString.Key.foregroundColor : UIColor.red])
                     self.loginFailedLabel.text = "이메일과 비밀번호가 일치하지 않습니다!"
+                    self.activityIndicator.stopAnimating()
                 }
             }
         }else{
@@ -106,6 +110,19 @@ class TeacherLoginViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
           self.view.endEditing(true)
     }
+    
+    lazy var activityIndicator: UIActivityIndicatorView = {
+            // Create an indicator.
+            let activityIndicator = UIActivityIndicatorView()
+            activityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+            activityIndicator.center = self.view.center
+            activityIndicator.color = UIColor.gray
+            // Also show the indicator even when the animation is stopped.
+            activityIndicator.hidesWhenStopped = true
+            activityIndicator.style = UIActivityIndicatorView.Style.medium
+            // Start animation.
+            activityIndicator.stopAnimating()
+            return activityIndicator }()
 
 }
 
